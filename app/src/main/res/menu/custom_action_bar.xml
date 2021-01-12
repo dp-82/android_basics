@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/miSearch"
+        android:checked="true"
+        android:icon="@drawable/ic_search"
+        android:title="Search"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/miFavourite"
+        android:icon="@drawable/ic_favourite"
+        android:title="Favourite"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/miPersonAdd"
+        android:icon="@drawable/ic_person_add"
+        android:title="Person Add"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/miSettings"
+        android:icon="@drawable/ic_search"
+        android:title="Settings"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/miExit"
+        android:icon="@drawable/ic_search"
+        android:title="Exit"
+        app:showAsAction="never" />
+</menu>
