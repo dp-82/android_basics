@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import kotlinx.android.synthetic.main.activity_second.*
 
 class SecondActivity : AppCompatActivity() {
@@ -11,19 +13,52 @@ class SecondActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second)
 
-        var str:String=intent.getStringExtra("name").toString()
-        tvSecondActivity.text="Hey! ${str} You accepted all permissions"
+        var str: String = intent.getStringExtra("name").toString()
+        tvSecondActivity.text = "Hey! ${str} You accepted all permissions"
+
+        val firstDialog = AlertDialog.Builder(this)
+            .setTitle("Contact Add")
+            .setMessage("Whether you want to add dp to your contact list?")
+            .setIcon(R.drawable.ic_person_add)
+            .setPositiveButton("Add") { _, _ ->
+                Toast.makeText(this, "Hey! you added!!", Toast.LENGTH_SHORT).show()
+            }
+            .setNegativeButton("Cancel") { _, _ ->
+                Toast.makeText(this, "Hey! you cancelled!!", Toast.LENGTH_SHORT).show()
+            }.create()
+
+        val genderList=arrayOf("Male", "Female")
+        val secondDailog = AlertDialog.Builder(this)
+            .setTitle("Gender")
+            .setMessage("Choose Your Gender")
+            .setIcon(R.drawable.ic_gender)
+            .setSingleChoiceItems(genderList, 0) { dialogInterface, which ->
+                Toast.makeText(this, "You choosed ${genderList[which]}", Toast.LENGTH_SHORT).show()
+            }
+            .setPositiveButton("Add") { _, _ ->
+                Toast.makeText(this, "Hey! you added!!", Toast.LENGTH_SHORT).show()
+            }
+            .setNegativeButton("Cancel") { _, _ ->
+                Toast.makeText(this, "Hey! you cancelled!!", Toast.LENGTH_SHORT).show()
+            }.create()
+
+        dailogFirst.setOnClickListener {
+            firstDialog.show()
+        }
+        dailogSecond.setOnClickListener {
+            secondDailog.show()
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.custom_action_bar,menu)
+        menuInflater.inflate(R.menu.custom_action_bar, menu)
         return true
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        tvSecondActivity.text=when(item.itemId){
-            R.id.miSearch->"Search"
-            R.id.miFavourite->"Favourite"
+        tvSecondActivity.text = when (item.itemId) {
+            R.id.miSearch -> "Search"
+            R.id.miFavourite -> "Favourite"
             R.id.miPersonAdd -> "Person Add"
             R.id.miSettings -> "Settings"
             R.id.miExit -> "Exit"

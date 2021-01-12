@@ -15,9 +15,9 @@ import kotlinx.android.synthetic.main.fragment_first.*
 import kotlinx.android.synthetic.main.fragment_second.*
 
 class MainActivity : AppCompatActivity() {
-    var fragmentFlag:Boolean=true
-    val first = FirstFragment()
-    val second = SecondFragment()
+    private var fragmentFlag:Boolean=true
+    private val first = FirstFragment()
+    private val second = SecondFragment()
     val dummy=DummyFragment()
 
     override fun onCreate(savedInstanceState: Bundle?) {

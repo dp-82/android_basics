@@ -11,13 +11,43 @@
         android:id="@+id/tvSecondActivity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="16dp"
-        android:text="Hey! You accepted all permissions"
-        android:textAlignment="center"
+        android:text="Hey!"
         android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/dailogFirst"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+        />
+    <Button
+        android:id="@+id/dailogSecond"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dailog 2"
+        app:layout_constraintBottom_toTopOf="@+id/dailogThird"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dailogFirst" />
+
+    <Button
+        android:id="@+id/dailogFirst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dailog 1"
+        app:layout_constraintBottom_toTopOf="@+id/dailogSecond"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/dailogThird"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dailog 3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dailogSecond" />
 </androidx.constraintlayout.widget.ConstraintLayout>
