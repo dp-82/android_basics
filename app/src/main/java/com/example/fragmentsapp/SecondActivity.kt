@@ -4,6 +4,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
+import android.widget.Adapter
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import kotlinx.android.synthetic.main.activity_second.*
@@ -48,6 +52,26 @@ class SecondActivity : AppCompatActivity() {
         dailogSecond.setOnClickListener {
             secondDailog.show()
         }
+
+        val monthsList= arrayListOf<String>("January","Feb","Mar")
+        val adapter= ArrayAdapter<String>(this,R.layout.support_simple_spinner_dropdown_item,monthsList)
+        spMonths.adapter=adapter
+
+        spMonths.onItemSelectedListener=object :AdapterView.OnItemSelectedListener{
+            override fun onItemSelected(
+                parent: AdapterView<*>?,
+                view: View?,
+                position: Int,
+                id: Long
+            ) {
+                Toast.makeText(this@SecondActivity,"You selected ${parent?.getItemAtPosition(position).toString()} ",Toast.LENGTH_SHORT).show()
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+                Toast.makeText(this@SecondActivity,"Hey you clicked nothing",Toast.LENGTH_SHORT).show()
+            }
+        }
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
