@@ -1,6 +1,6 @@
 # android_basics
-1.Intents
-2.Passing Data Between Intents
+#1.Intents
+#2.Passing Data Between Intents
 3.Permissions
 4.Using Implicit Intents to access images from device
 5.Adding Custom Toolbar
