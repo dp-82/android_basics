@@ -1,5 +1,6 @@
 package com.example.fragmentsapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
@@ -72,6 +73,12 @@ class SecondActivity : AppCompatActivity() {
             }
         }
 
+
+        btnGotoThirdActivity.setOnClickListener {
+            Intent(this,BottomNavigationActivity::class.java).also {
+                startActivity(it)
+            }
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
