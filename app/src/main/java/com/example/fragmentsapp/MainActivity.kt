@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
             }
             fragmentFlag=!fragmentFlag
         }
-        chooseImage.setOnClickListener {
+        ivChoosen.setOnClickListener {
             Intent(Intent.ACTION_GET_CONTENT).also {
                 it.type="image/*"
                 startActivityForResult(it,0)

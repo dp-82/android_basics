@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/dp_color"
     android:padding="16dp"
     tools:context=".SecondActivity">
 
@@ -23,6 +24,7 @@
         android:id="@+id/dailogSecond"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/btnbackground"
         android:text="Dailog 2"
         app:layout_constraintBottom_toTopOf="@+id/spMonths"
         app:layout_constraintEnd_toEndOf="parent"
@@ -34,6 +36,7 @@
         android:id="@+id/dailogFirst"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/btnbackground"
         android:text="Dailog 1"
         app:layout_constraintBottom_toTopOf="@+id/dailogSecond"
         app:layout_constraintEnd_toEndOf="parent"
@@ -55,6 +58,7 @@
         android:id="@+id/btnGotoThirdActivity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/btnbackground"
         android:text="Third Activity"
         app:layout_constraintBottom_toTopOf="@+id/dailogFirst"
         app:layout_constraintEnd_toEndOf="parent"

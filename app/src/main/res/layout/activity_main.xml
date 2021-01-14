@@ -4,57 +4,44 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/holo_green_dark"
-    android:padding="16dp"
+    android:background="@color/dp_color"
+    android:padding="4dp"
     tools:context=".MainActivity">
 
 
     <Button
         android:id="@+id/toggleFragment"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:background="@android:color/darker_gray"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/btnbackground"
         android:text="Toggle"
         app:layout_constraintEnd_toStartOf="@+id/ivChoosen"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/requestPermission"
-        tools:layout_editor_absoluteY="44dp" />
-
-    <Button
-        android:id="@+id/chooseImage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:background="@android:color/darker_gray"
-        android:text="@string/choose"
-        app:layout_constraintBottom_toBottomOf="@+id/requestPermission"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintHorizontal_bias="0.574"
+        app:layout_constraintStart_toEndOf="@+id/requestPermission"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/requestPermission"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginBottom="24dp"
-        android:background="@android:color/darker_gray"
-        android:text="@string/goto_second_screen"
-        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/btnbackground"
+        android:text="next"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toggleFragment"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/ivChoosen"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/abc_vector_test"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/abd"
         app:layout_constraintBottom_toTopOf="@+id/guideline"
-        app:layout_constraintEnd_toEndOf="@+id/chooseImage"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.25"
         tools:srcCompat="@tools:sample/avatars" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -62,12 +49,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="175dp" />
+        app:layout_constraintGuide_begin="84dp" />
 
     <FrameLayout
         android:id="@+id/frameLayout"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
